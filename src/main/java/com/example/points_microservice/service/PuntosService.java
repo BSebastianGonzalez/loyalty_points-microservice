@@ -13,10 +13,11 @@ public class PuntosService {
     @Autowired
     private PuntosRepository puntosRepository;
 
-    public void crearRegistroPuntos(Long userId) {
+    public void crearRegistroPuntos(Long userId, String email) {
         Puntos puntos = new Puntos();
         puntos.setUserId(userId);
         puntos.setPoints(0);
+        puntos.setEmail(email);
         puntosRepository.save(puntos);
         System.out.println("Registro de puntos creado para cliente " + userId);
     }

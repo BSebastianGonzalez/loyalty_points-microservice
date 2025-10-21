@@ -3,6 +3,7 @@ package com.example.points_microservice.listener;
 import com.example.points_microservice.event.ClienteCreadoEvent;
 import com.example.points_microservice.service.PuntosService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -14,6 +15,6 @@ public class PuntosListener {
     @RabbitListener(queues = "puntos.queue")
     public void onClienteCreado(ClienteCreadoEvent event) {
         System.out.println("Recibido evento en puntos-service para cliente " + event.getId());
-        puntosService.crearRegistroPuntos(event.getId());
+        puntosService.crearRegistroPuntos(event.getId(), event.getEmail());
     }
 }
