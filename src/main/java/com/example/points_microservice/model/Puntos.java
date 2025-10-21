@@ -18,5 +18,5 @@ public class Puntos {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Long userId;
-    private int points = 0;
+    private int points;
 }
