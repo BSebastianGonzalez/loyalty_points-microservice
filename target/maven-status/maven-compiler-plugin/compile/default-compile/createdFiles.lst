@@ -1,0 +1,9 @@
+com\example\points_microservice\service\PuntosService.class
+com\example\points_microservice\PointsMicroserviceApplication.class
+com\example\points_microservice\controller\PuntosController.class
+com\example\points_microservice\repository\PuntosRepository.class
+com\example\points_microservice\model\Puntos.class
+com\example\points_microservice\config\RabbitMQConfig.class
+com\example\points_microservice\config\WebConfig.class
+com\example\points_microservice\event\ClienteCreadoEvent.class
+com\example\points_microservice\listener\PuntosListener.class
